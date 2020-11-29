@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+#root {
+  background: url(./images/haptik-logo.png) no-repeat;
+  background-position: 10% 10%;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  border: 2px gray solid;
+  padding: 0;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  padding: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+i {
+  padding: 10px;
+  border: 1px solid gray;
+}
+.name {
+  margin-bottom: 5px;
+}
+.icon {
+  margin: 10px;
+}
+
+.app-header {
+  background: rgb(194, 194, 194);
+  padding: 10px;
+  border: 1px solid purple;
+}
+
+.sort-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  background: gainsboro;
+  padding: 5px 15px;
+  margin: 0 !important;
+}
+
+.friend-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.page-link {
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page-item.active .page-link{
+  background-color: gray;
+  border: 2px solid gray;
+  
+}
+
+.favourite i.fa.fa-star-o {
+  color: red;
 }

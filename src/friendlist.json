@@ -1,0 +1,49 @@
+{
+    "friendList": [
+        {
+            "id": "4cfd-1",
+            "name": "Neelesh P",
+            "isFavourite": false
+        },
+        {
+            "id": "4cfd-2",
+            "name": "Nitin P",
+            "isFavourite": true
+        },
+        {
+            "id": "4cfd-3",
+            "name": "Pooja C",
+            "isFavourite": true
+        },
+        {
+            "id": "4cfd-4",
+            "name": "Aditya KV",
+            "isFavourite": false
+        },
+        {
+            "id": "4cfd-5",
+            "name": "Navjot P",
+            "isFavourite": true
+        },
+        {
+            "id": "4cfd-6",
+            "name": "Prabhjot P",
+            "isFavourite": true
+        },
+        {
+            "id": "4cfd-7",
+            "name": "Saumitra S",
+            "isFavourite": false
+        },
+        {
+            "id": "4cfd-8",
+            "name": "Dolly M",
+            "isFavourite": false
+        },
+        {
+            "id": "4cfd-9",
+            "name": "Megha G",
+            "isFavourite": false
+        }
+    ]
+}
