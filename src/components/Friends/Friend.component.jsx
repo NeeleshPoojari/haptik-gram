@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Friend = ({ friend, deleteFriend, addFavourite }) => {
+const Friend = ({ friend, addFavourite, updateThrModal }) => {
   return (
     <li className={`list-group-item ${friend.isFavourite ? "favourite" : ""}`}>
       <div class="friend-container">
@@ -18,7 +18,7 @@ const Friend = ({ friend, deleteFriend, addFavourite }) => {
           </span>
           <span
             className="icon delete-icon"
-            onClick={() => deleteFriend(friend.id)}
+            onClick={() => updateThrModal(friend)}
           >
             <i className="fa fa-trash" aria-hidden="true"></i>
           </span>
@@ -30,7 +30,7 @@ const Friend = ({ friend, deleteFriend, addFavourite }) => {
 
 Friend.propTypes = {
   friend: PropTypes.object.isRequired,
-  deleteFriend: PropTypes.func.isRequired,
+  updateThrModal: PropTypes.func.isRequired,
   addFavourite: PropTypes.func.isRequired,
 };
 

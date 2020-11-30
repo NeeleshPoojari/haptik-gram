@@ -3,6 +3,7 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 
 
+
 //componts
 import Friends from "./components/Friends/Friends.component";
 import Pagination from "./components/Pagination/Pagination.component";
@@ -23,7 +24,8 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [friendPerPage] = useState(4);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [deleteFr, setDeleteFr] = useState({});
 
   //did mount
   useEffect(() => {
@@ -83,6 +85,7 @@ const App = () => {
   // Delete friend
   const deleteFriend = (id) => {
     const filteredList = friendList.filter((fr) => fr.id !== id);
+    setIsOpenModal(false);
     setFriendList(filteredList);
   };
 
@@ -96,6 +99,12 @@ const App = () => {
 
   //Sort by Favourite
   const toggleSort = () => setSorted(!isSorted);
+
+  //open modal
+  const updateThrModal = (fr) => {
+    setIsOpenModal(true);
+    setDeleteFr(fr);
+  }
 
   return (
     <div className="container mt-3 col-5">
@@ -117,6 +126,10 @@ const App = () => {
         addFavourite={addFavourite}
         currentPage={currentPage}
         friendPerPage={friendPerPage}
+        updateThrModal={updateThrModal}
+        isOpenModal={isOpenModal}
+        deleteFr={deleteFr}
+        setIsOpenModal={setIsOpenModal}
       />
       <Pagination
         friendPerPage={friendPerPage}
