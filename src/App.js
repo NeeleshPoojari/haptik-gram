@@ -108,7 +108,7 @@ const App = () => {
 
   return (
     <div className="container mt-3 col-5">
-      <h1 className="text-center mb-3 app-header">hAPTIK-gRAM</h1>
+      <h1 className="text-center mb-3 app-header">Friends</h1>
 
       <div className="action-container">
         <AddFriend
